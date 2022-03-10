@@ -26,28 +26,28 @@ for(let i=1; i<=T; i++) { //테스트 별로 계산하기 위한 반복문
 console.log(answer)
 
 
-// //성공
-// for(let i=1; i<=T; i++) { //테스트 별로 계산하기 위한 반복문
-//     let total = 0 // +,-의 총 합을 담기 위해 미리 선언
-//     let eachOne = input[i].split('') //각 테스트의 괄호들을 하나하나 나누기
-//     for( let j=0; j<eachOne.length; j++ ) { //나눈것들 다시 반복문
-//         if ( total < 0 ) {//총 합이 0보다 작으면
-//             break; //반복문 빠져나오기
-//         } if( eachOne[j] === '(' ) { //만약 하나하나 나눈 j번째 괄호가 ( 이렇게 생겼으면
-//                 total = total + 1//총 합에 1을 더하기
-//             } else {//아니면
-//                 total = total - 1//총 합에서 1을 빼기
-//             }
-//         }
+//성공
+for(let i=1; i<=T; i++) { //테스트 별로 계산하기 위한 반복문
+    let total = 0 // +,-의 총 합을 담기 위해 미리 선언
+    let eachOne = input[i].split('') //각 테스트의 괄호들을 하나하나 나누기
+    for( let j=0; j<eachOne.length; j++ ) { //나눈것들 다시 반복문
+        if ( total < 0 ) {//총 합이 0보다 작으면
+            break; //반복문 빠져나오기
+        } if( eachOne[j] === '(' ) { //만약 하나하나 나눈 j번째 괄호가 ( 이렇게 생겼으면
+                total = total + 1//총 합에 1을 더하기
+            } else {//아니면
+                total = total - 1//총 합에서 1을 빼기
+            }
+        }
 
-//    if( total === 0 ){ //최종적으로 총 합이 0이면 괄호의 짝이 다 맞은거니까
-//         answer = answer + 'YES' + '\n' //YES, 줄바꿈
-//     } else { //아니면 
-//         answer = answer + 'NO' + '\n' //NO, 줄바꿈
-//     } 
-// }
+   if( total === 0 ){ //최종적으로 총 합이 0이면 괄호의 짝이 다 맞은거니까
+        answer = answer + 'YES' + '\n' //YES, 줄바꿈
+    } else { //아니면 
+        answer = answer + 'NO' + '\n' //NO, 줄바꿈
+    } 
+}
 
-// console.log(answer)
+console.log(answer)
 
 
 // 스택개념 이용
