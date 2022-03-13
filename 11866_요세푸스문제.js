@@ -1,7 +1,9 @@
-const fs = require('fs');
-let input = fs.readFileSync('./dev/stdin').toString().trim().split(' ');
-let [n, k] = input.map((n) => parseInt(n));
+// const fs = require('fs');
+// let input = fs.readFileSync('./dev/stdin').toString().trim().split(' ');
+// let [n, k] = input.map((n) => parseInt(n));
 
+const n = 7 //총 인원
+const k = 3 //제거될 순번
 
 let ansArr = []; //출력이 배열이어야 하므로 값들이 담길 빈 배열을 생성한다.
 
@@ -18,5 +20,5 @@ while (arrN.length > 0) { //배열 속의 값이 없어질 때까지 반복해�
   arrN.splice(num, 1);//배열의 num번째 값을 제거해준다. splice(제거할 값의 위치, 제거할 값의 개수)
 } //k번째 값을 제거할 때마다 배열의 길이가 줄어들기 때문에 위와 같은 방법 사용. 
 
-const ans = '<' + ansArr.join(', ') + '>'; //ansArr만 출력하면 공백이 없어서 사이사이에 공백을 만든다.
+const ans = '<' + ansArr.join(', ') + '>'; //ansArr만 출력하면 공백이 없어서 사이사이에 반점과 공백을 만든다.
 console.log(ans);
