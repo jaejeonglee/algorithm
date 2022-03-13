@@ -3,8 +3,8 @@ let input = fs.readFileSync('./dev/stdin').toString().trim().split(' ');
 let A = Number(input[0])
 let B = Number(input[1])
 
-let yaksu = 0;
-let baesu = 0;
+let yaksu = 1;
+let baesu = 1;
 // if (A>B) {
 //     for (let i=B; i>=1; i--) {
 //         if (B%i===0) {
@@ -41,5 +41,17 @@ let baesu = 0;
 //     yaksu = A
 //     baesu = A
 // }
+    for(let i=2; i<=Math.min(A, B); i++){
+        if(A % i === 0 && B % i === 0){
+            yaksu = i;
+        }
+    }
+    while(true){
+      if((baesu % A == 0) && (baesu % B == 0)){
+        break;
+      }
+      baesu++;
+    }
+
 console.log(yaksu)
 console.log(baesu)
