@@ -42,7 +42,11 @@ if (A>B) {
 //     baesu = A
 // }
 
-    for(let i=Math.min(A, B); i<=2; i--){ //Math.min으로 둘 중 작은 값을 찾아내어 반복문을 돌린다.
+
+//gcd, lcm 구하기
+
+    for(let i=2; i<=Math.min(A, B); i++){ //Math.min으로 둘 중 작은 값을 찾아내어 반복문을 돌린다.
+
         if(A % i === 0 && B % i === 0){ //A와 B를 i로 나눈 나머지가 둘 다 0일 때
             yaksu = i; //최대공약수는 i가 된다.
         }
