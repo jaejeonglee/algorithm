@@ -5,22 +5,22 @@ let B = Number(input[1])
 
 let yaksu = 1;
 let baesu = 1;
-// if (A>B) {
-//     for (let i=B; i>1; i--) {
-//         if (B%i===0) {
-//             if (A%i===0) {
-//                 yaksu = i;
-//                 break;
-//             }
-//         }
-//     };
-//     for (let i=1; i<=A; i++) {
-//         if (B*i%A===0) {
-//             baesu = B*i
-//             break;
-//         }
-//     }
-// }
+if (A>B) {
+    for (let i=B; i>1; i--) {
+        if (B%i===0) {
+            if (A%i===0) {
+                yaksu = i;
+                break;
+            }
+        }
+    };
+    for (let i=1; i<=A; i++) {
+        if (B*i%A===0) {
+            baesu = B*i
+            break;
+        }
+    }
+}
 // if (B<A) {
 //     for (let i=A; i>1; i--) {
 //         if (A%i===0) {
@@ -42,7 +42,7 @@ let baesu = 1;
 //     baesu = A
 // }
 
-    for(let i=2; i<=Math.min(A, B); i++){ //Math.min으로 둘 중 작은 값을 찾아내어 반복문을 돌린다.
+    for(let i=Math.min(A, B); i<=2; i--){ //Math.min으로 둘 중 작은 값을 찾아내어 반복문을 돌린다.
         if(A % i === 0 && B % i === 0){ //A와 B를 i로 나눈 나머지가 둘 다 0일 때
             yaksu = i; //최대공약수는 i가 된다.
         }
