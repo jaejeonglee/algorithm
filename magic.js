@@ -9,7 +9,6 @@ for (let i = 1; i <= num; i++) {
   console.log(i);
 }
 
-
 //여러 줄 입력
 
 const fs = require('fs');
